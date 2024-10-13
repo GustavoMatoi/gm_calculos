@@ -4,6 +4,8 @@ import React from 'react';
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import FontAwesome from '@expo/vector-icons/FontAwesome';
+import Produto from '@/model/produto';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -24,11 +26,11 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="Historico"
         options={{
-          title: 'Explore',
+          title: 'Historico',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <FontAwesome name="history" size={24} color={focused ? 'white' : 'black'} />
           ),
         }}
       />
